@@ -5,11 +5,11 @@
 
 body
 {
-	font-family: tahoma;
-	color: teal ;
-	background-color: silver;
-	margin-left: 75px;
-	margin-right: 75px;
+	font-family: Georgia;
+	color: purple ;
+	background-color: gold;
+	margin-left: 60px;
+	margin-right: 60px;
 }
 
 header, footer
@@ -19,22 +19,22 @@ header, footer
 
 h1, h2, h3
 {
-	font-family: Cambria, Cochin, Georgia, serif;
+	font-family: Cochin, serif, Georgia, Cochin;
 	text-align: center;
-	line-height: 0px;
+	line-height: 1px;
 }
 
 a
 {
 	text-decoration: none;
-	color: lightseagreen;
+	color: purple;
 	font-weight: bold;
 }
 
 a:hover
 {
 	text-decoration: underline;
-	color: mediumseagreen;
+	color: yellow;
 }
 
 figure
