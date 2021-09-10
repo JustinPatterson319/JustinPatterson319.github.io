@@ -6,28 +6,34 @@
 body
 {
 	font-family: Georgia;
-	color: purple ;
-	background-color: gold;
-	margin-left: 60px;
-	margin-right: 60px;
-}
+	color: #5000AA ;
+	background-color: #FF9900;
+	}
 
 header, footer
 {
 	text-align: center;
 }
 
-h1, h2, h3
+h1, h2
 {
 	font-family: Cochin, serif, Georgia, Cochin;
 	text-align: center;
-	line-height: 1px;
+	line-height: 20px;
+}
+
+
+h3
+{
+	font-family: Cochin, serif, Georgia, Cochin;
+	text-align: left;
+	line-height: 20px;
 }
 
 a
 {
 	text-decoration: none;
-	color: purple;
+	color: black;
 	font-weight: bold;
 }
 
