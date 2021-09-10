@@ -32,6 +32,32 @@ h3
 	line-height: 20px;
 }
 
+form
+{
+	font-family: serif;
+	background-color: white;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 20x;
+	text-decoration: underline;
+	color: brown;
+	border: 3px solid black;
+}
+
+#submit
+{
+	background-color: black;
+	color: white;
+}
+
+#submit:hover
+{
+	background-color: yellow;
+	color: black;
+}
+
+
+
 a
 {
 	text-decoration: none;
