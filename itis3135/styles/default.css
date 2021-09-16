@@ -6,10 +6,11 @@
 body
 {
 	font-family: Georgia;
-	color: #080AAA ;
-	background-color: #CC9011;
+	color: #04039A ;
+	background-color: #d0c080;
 	margin-left: 60px;
 	margin-right: 60px;
+	line-height: 23px;
 	}
 
 header, footer
