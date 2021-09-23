@@ -18,6 +18,13 @@ header, footer
 	text-align: center;
 }
 
+button
+{
+	text-align: center;
+	color: blue;
+}
+
+
 h1, h2
 {
 	font-family: Cochin, serif, Georgia, Cochin;

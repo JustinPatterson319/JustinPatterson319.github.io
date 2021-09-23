@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="styles/default.css" rel="stylesheet" type="text/css" >
+	<title>Justin Patterson, ITIS 3135, First Scripts</title>
+	<script src="scripts/alert.js"></script>
+</head>
+
+<body>
+	<header>
+			<h1>Justin Patterson >> ITIS3135</h1>
+	</header>
+	<nav>
+		<a href="introduction.html">Introduction</a> 
+        ||
+		<a href="index.html">Index</a>
+	   ||
+		<a href="forms.html">Forms</a>
+	   ||
+		<a href="tables.html">Tables</a>
+         ||
+		<a href="website_evaluations.html">Evaluations</a>
+	    ||
+		<a href="brand-jolly-pegasus.html">Brand</a>
+	    ||
+		<a href="first-scripts.html">First Scripts</a>
+
+
+
+
+	</nav>
+	
+	
+	<main>
+		<h2>First Scripts</h2>
+		<h2><button onclick="alertTime()">Hello Button</button></h2>
+		
+		<p>
+		Today's date is
+			<script>
+				var today = new Date();
+				document.write(" ");
+				document.write(today.toDateString());
+			</script>
+		and the current time is
+			<script>
+				var time = today.getHours() + ":" + today.getMinutes();
+				document.write(time + ".");
+			</script>
+		The Jolly Pegasus Corporation welcomes you, 
+		<script>
+			window.onload = askName();
+			document.write(".");
+		</script>
+		We are glad to hear you are
+		<script>
+			window.onload = howAreYou();
+			document.write("!");
+		</script>
+		</p>
+ 
+		<h3 style="text-align: center">
+			It's time for some more buttons! Try and see what these all do... <br>
+			<button onclick="quickMaths()">Quick Maths</button>
+			<button onclick="justNeigh()">Neigh</button>
+			<button onclick="repeatAfterMe()">Repeat</button>
+			<button onclick="yourPet()">Your Pet!</button>
+			<button onclick="activateOthers()">Random Button</button>
+
+		</h3>
+	</main>
+	
+	<footer>
+		<br/>
+		<nav>
+		    <a href="http://webpages.uncc.edu/jpatte88/" target="_blank">Charlotte.edu</a> &#9553;
+		    <a href="https://github.com/JustinPatterson319" target="_blank">Github</a> &#9553;
+		    <a href="https://JustinPatterson319.github.io/" target="_blank">Github.io</a> &#9553;
+		    <a href="https://JustinPatterson319.github.io/itis3135/" target="_blank">ITIS 3135 Github Pages</a> &#9553;
+		    <a href="https://www.codecademy.com/profiles/justinPatterson6238374947" target="_blank">Codecademy</a> &#9553;
+		    <a href="https://www.freecodecamp.org/justin_patterson" target="_blank">freeCodeCamp</a> &#9553;
+		    <a href="https://jsfiddle.net/user/JustinPatterson/fiddles/" target="_blank">JSFiddle</a> &#9553;
+		    <a href="https://www.linkedin.com/in/justin-patterson-8b577121b/" target="_blank">LinkedIn</a> &#9553;
+		</nav>
+		<br />
+		<p>
+			Page built by The Jolly Pegasus Corporation
+		</p>
+		<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2FJustinPatterson319.github.io%2Fitis3135%2Ffirst-scripts.html">
+			<img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
+		</a>
+
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjustinpatterson319.github.io%2Fitis3135%2Ffirst-scripts.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css">
+			<img src="images/button-valid-css.gif" width="88" height="31" alt="Link to CSS validator">
+		</a>
+	
+	</footer>
+
+</body>
+
+</html>
