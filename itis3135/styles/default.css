@@ -21,7 +21,16 @@ header, footer
 button
 {
 	text-align: center;
-	color: blue;
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	background-color: black;
+}
+
+button:hover
+{
+	background-color: yellow;
+	color: black;
 }
 
 
@@ -134,3 +143,8 @@ nav
 		{
 			background-color: white;
 		}
+
+.calculator_keys
+{
+	display: grid;
+}
