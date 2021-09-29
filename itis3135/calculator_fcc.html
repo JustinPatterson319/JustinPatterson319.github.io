@@ -4,83 +4,219 @@
 	<meta charset="UTF-8">
 	<link href="styles/default.css" rel="stylesheet" type="text/css" >
 	<title>Justin Patterson, ITIS 3135, Calculator</title>
-	<script src="scripts/calculator_fcc.js"></script>
 </head>
 <body>
 	<header>
-			<h1>Justin Patterson >> ITIS3135</h1>
+		<h1>Justin Patterson >> ITIS3135</h1>
 	</header>
 	<nav>
 		<a href="introduction.html">Introduction</a> 
-        ||
+		||
 		<a href="index.html">Index</a>
-	   ||
+		||
 		<a href="forms.html">Forms</a>
-	   ||
+		||
 		<a href="tables.html">Tables</a>
-         ||
+		||		
 		<a href="website_evaluations.html">Evaluations</a>
-	    ||
+		||
 		<a href="brand-jolly-pegasus.html">Brand</a>
 		||
 		<a href="first-scripts.html">First Scripts</a>
-	    <br>
+		<br>
 		<a href="name-polygons.html">Polygon Names</a>
 		||
 		<a href="calculator_try.html">Calculator(Try)</a>
 		||
 		<a href="calculator_fcc.html">Calculator(Tutorial)</a>
-
-
-
-
-
-
 	</nav>
 	
 	
 	<main>
-		<h2>Calculator(Try)</h2>
-		    <div class="container">
-        <p>
-          This should work like a calculator... but it doesn't :(
-        </p>
-        <div class="calculator">
-          <div class="calculator__display">0</div>
-    
-          <div class="calculator__keys">
-            <button class="key--operator" data-action="add">+</button>
-            <button class="key--operator" data-action="subtract">-</button>
-            <button class="key--operator" data-action="multiply">&times;</button>
-            <button class="key--operator" data-action="divide">÷</button>
-            <br>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <br>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <br>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <br>
-            <button>0</button>
-            <button data-action="decimal">.</button>
-            <button data-action="clear">AC</button>
-            <button class="key--equal" data-action="calculate">=</button>
-          </div>
-        </div>
-      </div>
-
-		<p>
-			I'm like 99% sure I had the tutorial typed word for word to the point I was
-			copying and pasting my code and the tutorials code next to each other to make sure it was identical.
-			Not sure why but the JavaScript was almost completely unresponsive when doing this. After
-			hours of scrolling through the tutorial I couldn't find an issue anywhere. It was, however, a long
-			tutorial so I'm sure I must have just skipped a step or something small is giving an error. 
+		<h2>Calculator(W/Tutorial)</h2>
+     <div class="container">
+		<p style="text-align: center">
+			After way more time than I thought it'd be... this thing works!
 		</p>
+		<h3 style="text-align: center">		      		    
+    			<div class="calculator">
+      			<button class="calculator__display">0</button>
+
+      			<div class="calculator__keys">
+      				<button class="key--operator" data-action="add">+</button>
+				      <button class="key--operator" data-action="subtract">-</button>
+				      <button class="key--operator" data-action="multiply">&times;</button>
+				      <button class="key--operator" data-action="divide">÷</button>
+				      <br>
+				      <button>7</button>
+				      <button>8</button>
+				      <button>9</button>
+				      <button class="key--equal" data-action="calculate">=</button>
+				      <br>
+				      <button>4</button>
+				      <button>5</button>
+				      <button>6</button>
+				      <button class="key--equal" data-action="calculate">=</button>
+				      <br>
+				      <button>1</button>
+				      <button>2</button>
+				      <button>3</button>
+				      <button class="key--equal" data-action="calculate">=</button>
+				      <br>
+				      <button>0</button>
+				      <button data-action="decimal">.</button>
+				      <button data-action="clear">AC</button>
+				      <button class="key--equal" data-action="calculate">=</button>
+ 				</div>
+    			</div>
+  		</h3>
+ 	 </div>
+  
+  
+  	<script>
+		const display = document.querySelector('.calculator__display');
+		const calculator = document.querySelector('.calculator');
+		const keys = calculator.querySelector('.calculator__keys');
+		
+		const calculate = (n1, operator, n2) => 
+		{
+		  const firstNum = parseFloat(n1)
+		    const secondNum = parseFloat(n2)
+		    if (operator === 'add') return firstNum + secondNum
+		    if (operator === 'subtract') return firstNum - secondNum
+		    if (operator === 'multiply') return firstNum * secondNum
+		    if (operator === 'divide') return firstNum / secondNum
+		}
+		
+		keys.addEventListener('click', e => 
+		                      {
+		  if (e.target.matches('button')) 
+		  {
+		    const key = e.target;
+		    const action = key.dataset.action;
+		    const keyContent = key.textContent;
+		    const displayedNum = display.textContent;
+		    // Remove .is-depressed class from all keys
+		    Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'));
+		    
+		    if (!action) 
+		    {
+		      const previousKeyType = calculator.dataset.previousKeyType;
+		      if (displayedNum === '0' ||
+		          previousKeyType === 'operator' ||
+		          previousKeyType === 'calculate') 
+		      {
+		        display.textContent = keyContent;
+		      } 
+		      else 
+		      {
+		        display.textContent = displayedNum + keyContent;
+		      }
+		      calculator.dataset.previousKeyType = 'number';
+		    }
+		    
+		    if (action === 'decimal') 
+		    {
+		      if (!displayedNum.includes('.')) 
+		      {
+		        display.textContent = displayedNum + '.';
+		      } 
+		      else if (previousKeyType === 'operator' || previousKeyType === 'calculate') 
+		      {
+		        display.textContent = '0.';
+		      }
+		      calculator.dataset.previousKeyType = 'decimal'
+		    }
+		    
+		    if (action === 'add' ||
+		        action === 'subtract' ||
+		        action === 'multiply' ||
+		        action === 'divide') 
+		    {
+		      const firstValue = calculator.dataset.firstValue;
+		      const operator = calculator.dataset.operator;
+		      const secondValue = displayedNum;
+		      const previousKeyType = calculator.dataset.previousKeyType;
+		      if (firstValue &&
+		          operator &&
+		          previousKeyType !== 'operator' &&
+		          previousKeyType !== 'calculate') 
+		      {
+		        const calcValue = calculate(firstValue, operator, secondValue);
+		        display.textContent = calcValue;
+		        // Update calculated value as firstValue
+		        calculator.dataset.firstValue = calcValue;
+		      } 
+		      else 
+		      {
+		        // If there are no calculations, set displayedNum as the firstValue
+		        calculator.dataset.firstValue = displayedNum;
+		      }
+		      
+		      key.classList.add('is-depressed');
+		      // Add custom attribute
+		      calculator.dataset.previousKeyType = 'operator';
+		      calculator.dataset.firstValue = displayedNum;
+		      calculator.dataset.operator = action;
+		    }
+		    
+		    if (action === 'decimal') 
+		    {
+		      if (!displayedNum.includes('.') ) 
+		      {
+		        display.textContent = displayedNum + '.';
+		      }
+		      if (calculator.dataset.previousKeyType === 'operator') 
+		      {
+		        display.textContent = '0.';
+		      }
+		      calculator.dataset.previousKeyType = 'decimal';
+		    }
+		    
+		    if (action === 'clear') 
+		    {
+		      if (key.textContent === 'AC') 
+		      {
+		        calculator.dataset.firstValue = '';
+		        calculator.dataset.modValue = '';
+		        calculator.dataset.operator = '';
+		        calculator.dataset.previousKeyType = '';
+		      } 
+		      else 
+		      {
+		        key.textContent = 'AC';
+		      }
+		      display.textContent = 0;
+		      calculator.dataset.previousKeyType = 'clear';
+		    }
+		    if (action !== 'clear') 
+		    {
+		      const clearButton = calculator.querySelector('[data-action=clear]')
+		        clearButton.textContent = 'CE';
+		    }
+		    
+		    if (action === 'calculate') 
+		    {
+		      let firstValue = calculator.dataset.firstValue;
+		      const operator = calculator.dataset.operator;
+		      let secondValue = displayedNum;
+		      const previousKeyType = calculator.dataset.previousKeyType;
+		      if (firstValue) 
+		      {
+		        if (previousKeyType === 'calculate') 
+		        {
+		          firstValue = displayedNum;
+		          secondValue = calculator.dataset.modValue;
+		        }
+		        display.textContent = calculate(firstValue, operator, secondValue);
+		      }
+		      // Set modValue attribute
+		      calculator.dataset.modValue = secondValue;
+		      calculator.dataset.previousKeyType = 'calculate';
+		    }
+		  }
+		})
+	</script>
 	</main>
 	
 	<footer>
@@ -95,7 +231,7 @@
 		    <a href="https://jsfiddle.net/user/JustinPatterson/fiddles/" target="_blank">JSFiddle</a> &#9553;
 		    <a href="https://www.linkedin.com/in/justin-patterson-8b577121b/" target="_blank">LinkedIn</a>
 		</nav>
-		<br />
+		<br/>
 		<p>
 			Page built by The Jolly Pegasus Corporation
 		</p>

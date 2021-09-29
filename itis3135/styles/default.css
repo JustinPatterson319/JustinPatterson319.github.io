@@ -144,7 +144,31 @@ nav
 			background-color: white;
 		}
 
-.calculator_keys
+.calculator__display
 {
-	display: grid;
+	width: 215px;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	background-size: 100px 1px;
+}
+.calculator__display:hover
+{
+	width: 215px;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	background-size: 100px 1px;
+}
+
+.key--operator
+{
+	background-color: cyan;
+	color: black;
+}
+
+.key--equal
+{
+	background-color: orange;
+	color: black;
 }
