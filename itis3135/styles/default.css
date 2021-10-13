@@ -172,3 +172,14 @@ nav
 	background-color: orange;
 	color: black;
 }
+
+p
+{
+	font-weight:normal;
+	color: black;
+}
+ul, ol
+{
+	font-weight:normal;
+	color: black;
+}
