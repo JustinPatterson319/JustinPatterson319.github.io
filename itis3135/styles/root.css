@@ -1,0 +1,27 @@
+body
+{
+	color: yellow;
+	background-color: gray;
+	text-align: center;
+	font-family: Georgia;
+}
+
+header
+{
+	background-color: black;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+footer
+{
+	color: black;
+	font-weight: bold;
+}
+
+a
+{
+	color: powderblue;
+	text-align: center;
+	font-size: 20px;
+}
