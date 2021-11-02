@@ -3,7 +3,7 @@
 		footer{
 			text-align: center;
 			border:3px solid #9d05e5;
-			color: #e5a9a9;
+			color: black;
 			font-weight: bold;
 			font-size: 20px;
 			}
@@ -54,4 +54,12 @@
 		{
 		font-size: 45px;
 		color: #9d05e5;
+		}
+		
+		.validate
+		{
+			background-color: black;
+			color: #D66BA0;
+			font-family: Fantasy;
+			font-size: 30px;
 		}
