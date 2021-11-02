@@ -9,8 +9,8 @@
 			}
 
 		main{
-			padding: 50px;
-			color: #d66ba0;
+			padding: 24px;
+			color: #af4d98;
 			border:5px solid #9d05e5;
 			font-size: 25px;
 			}
@@ -33,7 +33,6 @@
 			}
 			
 		ul{
-			font-family: Fantasy;
 			list-style-type: circle;
 			}
 		li{
@@ -44,4 +43,15 @@
 		{
 			width: 400px;
 			height: 200px;
+		}
+		h3, h4, h5
+		{
+			font-size: 30px;
+			color: #666666;
+		}
+		
+		h2
+		{
+		font-size: 45px;
+		color: #9d05e5;
 		}
