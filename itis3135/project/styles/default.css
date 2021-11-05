@@ -44,7 +44,7 @@ body
 	border: solid 3px black;
 	font-family: Fantasy;
 	white-space: nowrap;
-}
+	}
 
 .navBar:hover {
   background-color: black;
@@ -61,7 +61,6 @@ body
 	border: solid 1px yellow;
 	color: yellow;
 	white-space: nowrap;
-
 }
 
 a:visited
@@ -93,4 +92,101 @@ footer
 	display: block;
 	margin-left: auto;
  	margin-right: auto;
+}
+
+p
+{
+	margin-top: -10px;
+	padding-left: 20px;
+	font-size: 25px;
+}
+
+h3
+{
+	font-size: 28px;
+	padding: 10px;
+	color: #333333;
+	font-family: Georgia;
+	margin-top: 0px;
+	padding-left: 15px;
+}
+
+.intro
+{
+	text-align: center;
+	display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  font-size: 30px;
+}
+
+.news
+{
+		text-align: center;
+	display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  font-size: 30px;
+}
+
+.survey
+{
+	float: right;
+	border: solid 4px black;
+	padding: 10px;
+	margin-right: 10px;
+	background-color: #cccc00;
+}
+
+.fashion
+{
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 30px;
+}
+
+.team
+{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 40px;
+	background-color: purple;
+	border: solid 4px black;
+	padding: 5px;
+	color: white;
+}
+
+.teamname
+{
+	font-size: 50px;
+	text-align: center;
+}
+
+hr
+{
+	border-color: black;
+}
+
+
+ol
+{
+	font-size: 23px;
+	font-weight: bold;
+}
+
+ul
+{
+	font-weight: normal;
+	font-size: 19px;
+}
+
+.question
+{
+	border: solid 4px black;
+	padding: 10px;
+	margin-right: 10px;
+	background-color: #cccc00;
+	font-size: 25px;
 }
