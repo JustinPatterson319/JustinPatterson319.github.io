@@ -43,7 +43,7 @@ body
 	padding-right: 0px;
 	border: solid 3px black;
 	font-family: Fantasy;
-	white-space: nowrap;
+	white-space: nowrap;  	
 	}
 
 .navBar:hover {
