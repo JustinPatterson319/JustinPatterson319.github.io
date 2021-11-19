@@ -12,13 +12,14 @@ $(document).ready(function() {
         dataType: "json",
         success: function(data) {
             $("#team").html("");
-            $(data).find("management").children().each(function() {
-                var jsonDoc = $(this);
-                $("#team").append
-                ("<h3>" + jsonDoc.find("name").text() + "</h3>" +
-                          jsonDoc.find("title").text() + "<br>" +
-                          jsonDoc.find("bio").text() + "<br>");
+            $.each(data, function() {
+            $.each(this, function(key, text) {
+            	$("#team").append
+            	("<h3>" + text.name + "</h3>" +
+                          text.title + "<br>" +
+                          text.bio + "<br>");
             });
+          });
         }
     });
 });
