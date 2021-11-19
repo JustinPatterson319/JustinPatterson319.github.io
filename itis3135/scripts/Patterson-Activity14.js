@@ -7,6 +7,7 @@ $(document).ready(function() {
 			$("main h2").html(data['month'] + "<br />" + data['speaker']);
 			$("main img").attr("src", data.image);
 			$("main p").html(data.text);
+			document.getElementById("name").innerHTML("");
 			});
 		});
 	}); //end ready
