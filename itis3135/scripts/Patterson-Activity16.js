@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var html = "";
 		
 		$.each(data.items, function(i, item){
-		html += "<a href='" + item.media.m + "' data-lightbox='flickr'><img src=" + item.media.m + "></a>";
+		html += "<a href='" + item.media.m + "' data-lightbox='flickr'><img src=" + item.media.m + "</a>";
 	});
 	$("#new_building").html(html);
 	});
