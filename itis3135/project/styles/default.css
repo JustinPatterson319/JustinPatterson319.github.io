@@ -205,3 +205,42 @@ ul
 	float: right;
 }
 
+#tabs
+{
+	background-color: black;
+}
+
+.ui-accordion-content
+{
+	background-color: #333333;
+}
+
+.ui-accordion .ui-accordion-header
+{
+	color: yellow;
+	background-color: black;
+	border: solid .5px white;
+}
+
+.ui-accordion .ui-accordion-header:hover
+{
+	color: white;
+	background-color: #222222;
+	border: solid .5px white;
+}
+
+
+
+.ui-accordion .ui-accordion-header-active
+{
+	color: white;
+	background-color: #8b0000;
+	border: solid .5px grey;
+}
+
+.ui-accordion .ui-accordion-header-active:hover
+{
+	color: white;
+	background-color: #8b0000;
+	border: solid .5px grey;
+}
