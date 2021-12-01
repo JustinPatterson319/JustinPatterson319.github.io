@@ -4,26 +4,26 @@
 	<meta charset="UTF-8">
 	<title>Questions and Discussion</title>
 	<link href="styles/default.css" rel="stylesheet" type="text/css" >
+	<script src="scripts/forums.js"></script>
 </head>
 
 
 <body>
 	<header>
-			<img src="images/trialslogoftc.png" alt="Trials logo" class="symbol" width="160px" height="125px">
+			<img src="images/trialslogoftc.png" alt="Trials logo" class="symbol" height="75px">
 			<h1>Trials and Error</h1>
-			
+		<nav class="bar">
+			<a class="navBar" href="index.html">Home</a>
+			<a class="navBar" href="meet-team.html">Team</a> 
+			<a class="navBar" href="stats.html">Stats</a>
+			<a class="navBar" href="gallery.html">Fashion</a> 
+			<a class="navBar" href="forums.html">Forums</a> 
+		</nav>
 	</header>
-	
-	<nav class="bar">
-		<a class="navBar" href="index.html">Home</a>
-		<a class="navBar" href="meet-team.html">Team</a> 
-		<a class="navBar" href="stats.html">Stats</a>
-		<a class="navBar" href="gallery.html">Gallery</a> 
-		<a class="navBar" href="forums.html">Forums</a> 
-	</nav>
-	
+		
 	
 	<main>
+		<br><br><br><br>
 		<h2>Questions and Discussion</h2>
 		<img src="images/star.jpg" alt="Trials logo" class="logo" width="1594px" height="150px">
 		<h3>Frequently Asked Questions</h3>
@@ -65,10 +65,10 @@
 		</ol>
 		<hr>
 		<h3>Ask your own question!</h3>
-		<form class="question">
-			<label for="name"> What would you like to know? </label> <br>
-			<input type="text" id="name" name="name" required> <br>
-			<input type="submit" id="submit">
+		<form action="" onsubmit="completed()" class="question">
+			<label for="ask"> What would you like to know? </label> <br>
+			<input type="text" id="name" name="ask" class="forums"required> <br>
+			<input type="submit" id="submit" class="forumSub">
 		</form>
 		<hr>
 		<h3>Contact Us!</h3>

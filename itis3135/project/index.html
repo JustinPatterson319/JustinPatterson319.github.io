@@ -4,25 +4,26 @@
 	<meta charset="UTF-8">
 	<title>Trials and Error: Fireteam Finder</title>
 	<link href="styles/default.css" rel="stylesheet" type="text/css" >
+	<script src="scripts/apply.js"></script>
 </head>
 
 
 <body>
 	<header>
-			<img src="images/trialslogoftc.png" alt="Trials logo" class="symbol" width="160px" height="125px">
+			<img src="images/trialslogoftc.png" alt="Trials logo" class="symbol" height="75px">
 			<h1>Trials and Error</h1>
+		<nav class="bar">
+			<a class="navBar" href="index.html">Home</a>
+			<a class="navBar" href="meet-team.html">Team</a> 
+			<a class="navBar" href="stats.html">Stats</a>
+			<a class="navBar" href="gallery.html">Fashion</a> 
+			<a class="navBar" href="forums.html">Forums</a> 
+		</nav>
 	</header>
-	
-	<nav class="bar">
-		<a class="navBar" href="index.html">Home</a>
-		<a class="navBar" href="meet-team.html">Team</a> 
-		<a class="navBar" href="stats.html">Stats</a>
-		<a class="navBar" href="gallery.html">Gallery</a> 
-		<a class="navBar" href="forums.html">Forums</a> 
-	</nav>
-	
+		
 	
 	<main>
+		<br><br><br><br>
 		<h2>Home</h2>
 		<img src="images/Banner_TrialsofOsiris.jpg" alt="Trials logo" class="logo" width="1594px" height=
 		"150px">
@@ -31,78 +32,117 @@
 			This site is dedicated to our teams <a href=meet-team.html>LetsJustWipeGuys</a> and <a href=meet-team.html>Team Avatar</a>, two clans that
 			have been playing Destiny and Destiny 2 since 2014 (that's a long time!). Each page will let you dive in to
 			what our teams are like, when we play, what we're looking for in a team and new members, and will
-			allow you to join the team yourself!
+			allow you to join the team yourself! You can also check out information on our members such as PvP stats and what
+			kind of armor they enjoy wearing. Eyes up, Guardians!
 		<p>
 		<hr>
 		
-		<form class="survey">
-		Tell us about yourself! (FORM EXAMPLE)<br><br>
+		<form action="" onsubmit="completed()" class="survey">
+		<h3 style="font-size: 18px">Fill out this survey if you'd <br> like to join the crew!</h3>
+			<label for="name"> Name: </label> <br>
+			<input type="text" id="name" name="name"></input><br><br><br>
+			
+			<label for="user"> Username: </label> <br>
+			<input type="text" id="name" name="user"></input><br><br><br>
+			
+			<label for="platform"> Platform: </label> <br>
+			<select name="platform" id="platform">
+				<option value="hunter">PC</option>
+				<option value="titan">Playstation</option>
+				<option value="warlock">Xbox</option>
+			</select>
+			<br><br>
+			
+			<label for="class"> Destiny Class: </label> <br>
+			<select name="class" id="class">
+				<option value="hunter">Hunter</option>
+				<option value="titan">Titan</option>
+				<option value="warlock">Warlock</option>
+			</select>
+			<br><br>
+			
+			<label for="sub"> Subclass: </label> <br>
+			<select name="sub" id="sub">
+				<option value="solar">Solar</option>
+				<option value="arc">Arc</option>
+				<option value="void">Void</option>
+				<option value="stasis">Stasis</option>
+			</select>
+			<br><br>
+			
+			<label for="email"> Email: </label> <br>
+			<input type="text" id="name" name="email" required></input><br><br><br>
+			
+			<label for="phone"> Phone #: </label> <br>
+			<input type="text" id="name" name="phone"required></input><br><br><br>
+			
+			<label for="bungie"> Bungie Name: </label> <br>
+			<input type="text" id="name" name="bungie"required></input><br><br><br>
+			
+			<label for="weapon"> Favorite Exotic Weapon: </label> <br>
+			<input type="text" id="name" name="weapon" required></input><br><br><br>
+			
+			<label for="raid"> Favorite Raid: </label> <br>
+			<select name="sub" id="sub">
+				<option value="crota">Crota's End</option>
+				<option value="vault">Vault of Glass</option>
+				<option value="oryx">King's Fall</option>
+				<option value="wrath">Wrath of the Machine</option>
+				<option value="calus">The Leviathan</option>
+				<option value="riven">Last Wish</option>
+				<option value="garden">Garden of Salvation</option>
+				<option value="deep">Deep Stone Crypt</option>
+			</select>
+			<br><br>
+			
+			<label for="shade"> Favorite Shader: </label> <br>
+			<input type="text" id="name" name="shade" required></input><br><br><br>
+			
+			<label for="person"> Favorite Character: </label> <br>
+			<input type="text" id="name" name="person" required></input><br><br><br>
+			
+			<label for="place"> Favorite Destination: </label> <br>
+			<select name="place" id="place">
+				<option value="crota">Earth</option>
+				<option value="vault">Mars</option>
+				<option value="oryx">Titan</option>
+				<option value="wrath">Nessus</option>
+				<option value="calus">Io</option>
+				<option value="riven">Tangled Shore</option>
+				<option value="garden">Moon</option>
+				<option value="deep">Dreaming City</option>
+				<option value="city">Europa</option>
+			</select>
+			<br><br>
+						
+			<label for="name"> Favorite Content Creator: </label> <br>
+			<input type="text" id="name" name="name" required></input><br><br><br>
+			
+			<label for="name"> Favorite Color: </label> <br>
+			<input type="text" id="name" name="name" required></input><br><br><br>
+			
+			<label for="name"> Favorite Book: </label> <br>
+			<input type="text" id="name" name="name" required></input><br><br><br>
+			
+			<label for="name"> Favorite Movie: </label> <br>
+			<input type="text" id="name" name="name" required></input><br><br><br>
+			
 			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
-			<label for="name"> Favorite Video Game: </label> <br>
-			<input type="text" id="name" name="name"<br><br><br>
+			<input type="text" id="name" name="name" required></input><br><br><br>
+			
+			<input type="submit" id="apply" class="join" value="Join the Crew">
 		</form>
 		
 		
 		
-		<h4 class="intro">PRETEND THIS IS AN AWESOME INTRO VIDEO FOR NOW</h4>
-		<iframe class="intro" width="850" height="500"
-			src="https://www.youtube.com/embed/BNP5AKLW2IE">
-		</iframe>
-		
 		<h4 class="intro">New to the Destiny universe? Here's the trailer!</h4>
 		<iframe class="news" width="850" height="500"
 			src="https://www.youtube.com/embed/ZJLAJVmggt0">
+		</iframe>
+		
+		<h4 class="intro">Get a glipse at what the PvP experience can be...</h4>
+		<iframe class="intro" width="850" height="500"
+			src="https://www.youtube.com/embed/r7GEtIY6r9Q">
 		</iframe>
 		
 		<h4 class="intro">Check out the next content update!</h4>
