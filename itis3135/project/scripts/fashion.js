@@ -1,3 +1,4 @@
+$(document).ready(function() {
 $("#begin").click(function() {
     $.ajax({
         type: "get",
@@ -19,5 +20,6 @@ $("#begin").click(function() {
           });
         }
     });
+});
 });
 
